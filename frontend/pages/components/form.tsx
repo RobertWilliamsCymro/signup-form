@@ -1,7 +1,7 @@
+import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import * as yup from "yup";
-import { ErrorIcon } from "./error-icon";
+import { Banner } from "./banner";
 
 export const Form = () => {
   const validationSchema = yup.object().shape({
@@ -26,9 +26,11 @@ export const Form = () => {
 
   return (
     <>
+    <div className="w-4/5 mx-10">
+      <Banner />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4"
+        className="bg-white shadow-md rounded-lg px-8 pt-14 pb-8 mb-4 mt-4"
       >
         <div className="mb-4">
           <div className="relative">
@@ -100,13 +102,14 @@ export const Form = () => {
             CLAIM YOUR FREE TRIAL
           </button>
         </div>
-        <p className="text-sm text-center pt-4 text-gray-400">
+        <p className="text-sm mb-4 text-center pt-4 text-gray-400">
           By clicking the button, you are agreesing to our{" "}
           <a href="#" className="font-bold text-red-700">
             Terms and Services
           </a>
         </p>
       </form>
+      </div>
     </>
   );
 };
