@@ -1,8 +1,8 @@
 export const Heading = () => {
   return (
     <>
-      <div className="flex items-center justify-center">
-        <div className="text-center">
+      <div className="flex items-center">
+        <div className="ml-40">
           <div className="text-3xl sm:text-6xl font-bold mb-8">
           <h1>
             Learn to code by
