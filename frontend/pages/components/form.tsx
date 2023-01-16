@@ -38,7 +38,7 @@ export const Form = () => {
                 First Name
               </label>
               <input
-                className={`shadow appearance-none border rounded w-full py-2 px-3 
+                className={`shadow appearance-none border rounded w-full py-4 px-4 
                           font-bold text-gray-700 leading-tight focus:outline-none focus:shadow-outline
                            ${errors.firstName ? "is-invalid" : ""}`}
                 id="firstname"
@@ -56,7 +56,7 @@ export const Form = () => {
               First Name
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 
+              className={`shadow appearance-none border rounded w-full py-4 px-4 
               font-bold text-gray-700 leading-tight focus:outline-none focus:shadow-outline
                ${errors.lastName ? "is-invalid" : ""}`}
               id="lastname"
@@ -73,7 +73,7 @@ export const Form = () => {
               Email Address
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 
+              className={`shadow appearance-none border rounded w-full py-4 px-4 
               font-bold text-gray-700 leading-tight focus:outline-none focus:shadow-outline
                ${errors.email ? "is-invalid" : ""}`}
               id="emailaddress"
@@ -90,7 +90,7 @@ export const Form = () => {
               Password
             </label>
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 
+              className={`shadow appearance-none border rounded w-full py-4 px-4 
               font-bold text-gray-700 leading-tight focus:outline-none focus:shadow-outline
                ${errors.password ? "is-invalid" : ""}`}
               id="password"
@@ -104,14 +104,14 @@ export const Form = () => {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-green-400 hover:bg-green-300 text-white text-sm font-bold p-4 w-full rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-700 hover:bg-green-300 text-white text-sm font-bold p-4 w-full rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               CLAIM YOUR FREE TRIAL
             </button>
           </div>
-          <p className="text-sm mb-4 text-center pt-4 text-gray-400">
-            By clicking the button, you are agreesing to our{" "}
+          <p className="text-sm mb-4 text-center pt-4 text-gray-700">
+            By clicking the button, you are agreeing to our{" "}
             <a href="#" className="font-bold text-red-700">
               Terms and Services
             </a>
