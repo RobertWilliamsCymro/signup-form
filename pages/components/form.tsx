@@ -3,7 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { Banner } from "./banner";
 
-export const Form = () => {
+export const SignUpForm = () => {
   const validationSchema = yup.object().shape({
     firstName: yup.string().required("First Name cannot be empty"),
     lastName: yup.string().required("Last Name cannot be empty"),
@@ -121,4 +121,4 @@ export const Form = () => {
     </>
   );
 };
-export default Form;
+export default SignUpForm;
