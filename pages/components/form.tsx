@@ -44,6 +44,7 @@ export const SignUpForm = () => {
               type="text"
               {...register("firstName")}
               placeholder={errors.firstName ? "" : "First Name"}
+              autoComplete="given-name"
             />
             <div
               id="firstNameErrorMessage"
@@ -65,6 +66,7 @@ export const SignUpForm = () => {
               type="text"
               {...register("lastName")}
               placeholder={errors.lastName ? "" : "Last Name"}
+              autoComplete="family-name"
             />
             <div
               aria-live="polite"
@@ -85,6 +87,7 @@ export const SignUpForm = () => {
               type="email"
               {...register("email")}
               placeholder={errors.email ? "email@example/com" : "Email Address"}
+              autoComplete="email"
             />
             <div className="text-red-500 text-xs italic text-right font-bold">
               {errors.email?.message}
