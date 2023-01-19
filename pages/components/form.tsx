@@ -20,7 +20,7 @@ export const SignUpForm = () => {
   const { errors } = formState as any;
 
   function onSubmit(data: any) {
-    alert( "Thanks for signing up! You will receive an email shortly.");
+    alert("Thanks for signing up! You will receive an email shortly.");
     return false;
   }
 
@@ -32,28 +32,30 @@ export const SignUpForm = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="bg-white shadow-md rounded-lg px-8 pt-14 pb-8 mb-4 mt-4"
         >
-          <div className="mb-4">
-            <div className="relative">
-              <label className="sr-only" htmlFor="firstname">
-                First Name
-              </label>
-              <input
-                className={`shadow appearance-none border rounded w-full py-4 px-4 
+          <div className="mb-4 relative">
+            <label className="sr-only" htmlFor="firstname">
+              First Name
+            </label>
+            <input
+              className={`shadow appearance-none border rounded w-full py-4 px-4 
                           font-bold text-gray-700 leading-tight focus:outline-none focus:shadow-outline
                            ${errors.firstName ? "is-invalid" : ""}`}
-                id="firstname"
-                type="text"
-                {...register("firstName")}
-                placeholder={errors.firstName ? "" : "First Name"}
-              />
-              <div className="text-red-500 text-xs italic text-right font-bold">
-                {errors.firstName?.message}
-              </div>
+              id="firstname"
+              type="text"
+              {...register("firstName")}
+              placeholder={errors.firstName ? "" : "First Name"}
+            />
+            <div
+              id="firstNameErrorMessage"
+              aria-live="polite"
+              className="text-red-500 text-xs italic text-right font-bold"
+            >
+              {errors.firstName?.message}
             </div>
           </div>
           <div className="relative mb-4">
             <label className="sr-only" htmlFor="lastname">
-              First Name
+              Last Name
             </label>
             <input
               className={`shadow appearance-none border rounded w-full py-4 px-4 
@@ -64,7 +66,10 @@ export const SignUpForm = () => {
               {...register("lastName")}
               placeholder={errors.lastName ? "" : "Last Name"}
             />
-            <div className="text-red-500 text-xs italic text-right font-bold">
+            <div
+              aria-live="polite"
+              className="text-red-500 text-xs italic text-right font-bold"
+            >
               {errors.lastName?.message}
             </div>
           </div>
@@ -77,7 +82,7 @@ export const SignUpForm = () => {
               font-bold text-gray-700 leading-tight focus:outline-none focus:shadow-outline
                ${errors.email ? "is-invalid" : ""}`}
               id="emailaddress"
-              type="text"
+              type="email"
               {...register("email")}
               placeholder={errors.email ? "email@example/com" : "Email Address"}
             />
@@ -98,19 +103,26 @@ export const SignUpForm = () => {
               {...register("password")}
               placeholder={errors.password ? "" : "Password"}
             />
-            <div className="text-red-500 text-xs italic text-right font-bold">
+            <div
+              aria-live="polite"
+              className="text-red-500 text-xs italic text-right font-bold"
+            >
               {errors.password?.message}
             </div>
           </div>
           <div className="flex items-center justify-between">
             <button
+              aria-describedby="termsAndConditions"
               className="bg-green-700 hover:bg-green-300 text-white text-sm font-bold p-4 w-full rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               CLAIM YOUR FREE TRIAL
             </button>
           </div>
-          <p className="text-sm mb-4 text-center pt-4 text-gray-700">
+          <p
+            id="termsAndConditions"
+            className="text-sm mb-4 text-center pt-4 text-gray-700"
+          >
             By clicking the button, you are agreeing to our{" "}
             <a href="#" className="font-bold text-red-700">
               Terms and Services

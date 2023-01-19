@@ -1,8 +1,7 @@
 export const Heading = () => {
   return (
     <>
-      <div className="flex items-center">
-        <div className="text-center">
+      <div className="flex items-center text-center">
           <div className="text-3xl sm:text-6xl font-bold mb-8">
           <h1>
             Learn to code by
@@ -14,7 +13,6 @@ export const Heading = () => {
             scripted tutorials is great, but understanding how developers think
             is invaluable.
           </p>
-        </div>
       </div>
     </>
   );
